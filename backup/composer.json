@@ -1,0 +1,6 @@
+{
+    "name": "marcos/project",
+    "require": {
+        "filp/whoops": "^1.1"
+    }
+}
