@@ -4,7 +4,7 @@
 <div class="alert alert-danger" role="alert">
     <ul>
         @foreach($_SESSION['msg'] as $error)
-        <li>{!! $error  !!}</li>
+        <li> {!! $error  !!}</li>
         @endforeach
     </ul>
 </div>

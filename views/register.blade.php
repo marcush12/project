@@ -10,7 +10,8 @@
 
 
         <hr>
-        <form id='registerform' class='form-horizontal' name='registerform' action="register" method='post' novalidate>
+
+        <form id='registerform' class='form-horizontal' name='registerform' action="register" method='post' >
             <div class="form-group">
                 <label for="first_name" class='col-sm-2 control-label'>First Name</label>
                 <div class="col-sm-10">
@@ -49,7 +50,7 @@
             </div>
             <hr>
             <div class="form-group">
-                <div class="col-sm-offset-2 colsm-10">
+                <div class="col-sm-offset-2 col-sm-10">
                     <button type='submit' name='submit' class='btn btn-primary'>Register</button>
                 </div>
             </div>

@@ -7,7 +7,12 @@
       "altorouter/altorouter": "1.1.0",
       "respect/validation": "^1.1",
       "duncan3dc/blade": "3.0.0",
-      "robmorgan/phinx": "^0.4.4"
+      "robmorgan/phinx": "^0.4.4",
+        "symfony/var-dumper": "2.7.3",
+        "cocur/slugify": "1.2",
+        "swiftmailer/swiftmailer": "5.4.1",
+        "phpunit/phpunit": "5.7",
+        "kunststube/csrfp": "0.1.0"
     },
     "autoload": {
     

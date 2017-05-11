@@ -10,7 +10,7 @@ class SeedUsersTable extends AbstractMigration
         $this->execute("
             insert into users(first_name, last_name, email, password)
             VALUES
-            ('Linda', 'Deep', 'linda@deep.com', '$password_hash')
+            ('Annette', 'Haven', 'annette@haven.com', '$password_hash')
         ");
     }
 

@@ -14,7 +14,42 @@
                 <li class="active"><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/register">Register</a></li>
-                <li><a href="/login">Log In</a></li>
+                <li><a href="/testimonials">Testimonials</a></li>
+                @if(Acme\auth\LoggedIn::user())
+                    <li><a href="/add-testimonial">Add a Testimonial</a></li>
+                @endif
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                @if((Acme\Auth\LoggedIn::user()) && (Acme\Auth\LoggedIn::user()->access_level == 2))
+                    <li class="dropdown">
+                        <a id='drop1' class="dropdown-toggle" data-toggle="dropdown" href="">
+                            Admin
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="drop1">
+                            <li><a class="menu-item" onclick="makePageEditable(this)" href="#">Edit Page</a></li>
+                            <li role="separator" class="divider"></a></li>
+                            <li><a href="/admin/page/add">Add a page</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/logout">
+                            <span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Logout
+                        </a>
+                    </li>
+                @elseif(Acme\auth\LoggedIn::user())
+                    <li>
+                        <a href="/logout">
+                            <span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Logout
+                        </a>
+                    </li>
+                @else
+                    <li>
+                        <a href="/login">
+                            <span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login
+                        </a>
+                    </li>
+                @endif
             </ul>
         </div><!--/.nav-collapse -->
     </div>
